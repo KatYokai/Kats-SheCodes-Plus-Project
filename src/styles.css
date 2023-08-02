@@ -1,0 +1,66 @@
+body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/398/original/daycloud.jpg?1689133912");
+  background-size: cover;
+}
+.container {
+  border: 2px solid #bbbabc;
+  border-radius: 10px;
+  padding: 10px 30px 30px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+h1 {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 0;
+}
+h5 {
+  text-align: center;
+  font-size: 20px;
+}
+h2 {
+  text-align: center;
+  font-size: 50px;
+}
+p {
+  text-align: center;
+  font-weight: normal;
+}
+footer {
+  font-size: 12px;
+  text-align: center;
+}
+.mb-3 {
+  font-size: 12px;
+  text-align: left;
+}
+.form-control {
+  font-size: 10px;
+  padding: 3px 0 3px 12px;
+  background: rgba(188, 197, 208, 0.7);
+}
+.btn-secondary {
+  font-size: 12px;
+  border-radius: 150px;
+  margin: 5px auto 0px;
+  padding: 1px 12px;
+  background: #4a4a4a;
+  border: none;
+}
+.btn-primary {
+  font-size: 12px;
+  border-radius: 150px;
+  margin: 5px auto 0px;
+  padding: 1px 12px;
+  border: none;
+  background: #56c9f7;
+}
+.col {
+  font-weight: bold;
+  text-align: center;
+  margin: 30px auto;
+}
+.units {
+  font-size: 30px;
+}
