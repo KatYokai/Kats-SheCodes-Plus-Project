@@ -29,13 +29,13 @@ locationInput.addEventListener("submit", location);
 
 function showTemp(response) {
   let temp = document.querySelector("#temperature");
-  let temperature = Math.round(response.data.main.temp);
+  let temperature = Math.round(response.data.temperature.day);
   temp.innerHTML = `${temperature}`;
-  cityText.innerHTML = response.data.name;
+  cityText.innerHTML = response.data.city;
 }
 function locationTemp(input) {
-  let apiKey = "fda3688b1db05987dd5d07c237aecfba";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apiKey}&units=metric`;
+  let apiKey = "79a5e8b38cf0f847t9136fa452o839aa";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${input.value}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showTemp);
 }
