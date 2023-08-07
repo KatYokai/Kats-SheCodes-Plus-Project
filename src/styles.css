@@ -1,6 +1,5 @@
 body {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/398/original/daycloud.jpg?1689133912");
-  background-size: cover;
+  background: #c8e6f1;
 }
 .container {
   border: 2px solid #bbbabc;
