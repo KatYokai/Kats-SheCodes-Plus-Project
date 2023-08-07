@@ -1,17 +1,21 @@
 body {
   background: #c8e6f1;
+  font-family: "Lucida Console", monospace;
 }
 .container {
-  border: 2px solid #bbbabc;
   border-radius: 10px;
   padding: 10px 30px 30px;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
 }
+ul {
+  list-style: none;
+}
 h1 {
   font-size: 80px;
   margin-bottom: 0;
+  font-weight: bold;
 }
 h2 {
   text-align: center;
