@@ -65,3 +65,6 @@ a {
 .units {
   font-size: 80px;
 }
+.number {
+  font-weight: bold;
+}
