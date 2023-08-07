@@ -11,12 +11,12 @@ body {
   margin: 0 auto;
 }
 h1 {
-  font-size: 60px;
+  font-size: 80px;
   margin-bottom: 0;
 }
 h2 {
   text-align: center;
-  font-size: 50px;
+  font-size: 150px;
 }
 p {
   text-align: center;
@@ -60,5 +60,5 @@ a {
   margin: 30px auto;
 }
 .units {
-  font-size: 30px;
+  font-size: 80px;
 }
