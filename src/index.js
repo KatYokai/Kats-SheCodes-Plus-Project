@@ -31,6 +31,16 @@ function displayTemp(response) {
   wind.innerHTML = `${windNumber}km/h`;
 }
 
-let apiKey = "79a5e8b38cf0f847t9136fa452o839aa";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Miami&key=${apiKey}`;
-axios.get(url).then(displayTemp);
+function showTemp(response) {
+  let temp = document.querySelector("#temperature");
+  let temperature = Math.round(response.data.temperature.day);
+  temp.innerHTML = `${temperature}`;
+  cityText.innerHTML = response.data.city;
+}
+function locationTemp(input) {
+  let apiKey = "79a5e8b38cf0f847t9136fa452o839aa";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${input.value}&key=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(showTemp);
+}
+navigator.geolocation.getCurrentPosition(locationTemp);
