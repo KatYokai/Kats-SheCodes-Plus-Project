@@ -41,8 +41,9 @@ function showTemp(response) {
   let wind = document.querySelector("#wind");
   let humid = response.data.main.humidity;
   let windSpeed = response.data.wind.speed;
+  let conDescript = response.data.weather[0].main;
 
-  condition.innerHTML = response.data.weather[0].main;
+  condition.innerHTML = `${conDescript}`;
   humidity.innerHTML = `Humidity:${humid}%`;
   wind.innerHTML = `Wind:${windSpeed}km/h`;
   temp.innerHTML = `${temperature}`;
@@ -52,32 +53,32 @@ function showTemp(response) {
 }
 function weatherIcon(response) {
   let mainImg = document.querySelector("#mainImg");
-  if (response.data.weather[0].main === "clear") {
+  if (response.data.weather[0].main === "Clear") {
     mainImg.setAttribute(
       "src",
       `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/531/original/sun_icon.png?1691437170`
     );
-  } else if (response.data.weather[0].main === "clouds") {
+  } else if (response.data.weather[0].main === "Clouds") {
     mainImg.setAttribute(
       "src",
       `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/620/original/cloud_icon_Small.png?1691525951`
     );
-  } else if (response.data.weather[0].main === "thunderstorm") {
+  } else if (response.data.weather[0].main === "Thunderstorm") {
     mainImg.setAttribute(
       "src",
       `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/624/original/rain_icon.png?1691526296`
     );
-  } else if (response.data.weather[0].main === "drizzle") {
+  } else if (response.data.weather[0].main === "Drizzle") {
     mainImg.setAttribute(
       "src",
       `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/629/original/drizzle_icon.png?1691526943`
     );
-  } else if (response.data.weather[0].main === "rain") {
+  } else if (response.data.weather[0].main === "Rain") {
     mainImg.setAttribute(
       "src",
       `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/630/original/rain_icon_Small.png?1691527033`
     );
-  } else if (response.data.weather[0].main === "snow") {
+  } else if (response.data.weather[0].main === "Snow") {
     mainImg.setAttribute(
       "src",
       `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/631/original/snow_icon.png?1691527300`
