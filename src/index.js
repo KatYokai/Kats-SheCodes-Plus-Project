@@ -35,9 +35,9 @@ function showTemp(response) {
   let wind = document.querySelector("#wind");
   let humid = response.data.main.humidity;
   let windSpeed = response.data.wind.speed;
-  condition.innerHTML = response.data.weather.main;
-  humidity.innerHTML = `${humid}%`;
-  wind.innerHTML = `${windSpeed}km/h`;
+  condition.innerHTML = response.data.weather[0].main;
+  humidity.innerHTML = `Humidity:${humid}%`;
+  wind.innerHTML = `Wind:${windSpeed}km/h`;
   temp.innerHTML = `${temperature}`;
   cityText.innerHTML = response.data.name;
 }
