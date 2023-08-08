@@ -30,6 +30,14 @@ locationInput.addEventListener("submit", location);
 function showTemp(response) {
   let temp = document.querySelector("#temperature");
   let temperature = Math.round(response.data.main.temp);
+  let condition = document.querySelector("#condition");
+  let humidity = document.querySelector("#humidity");
+  let wind = document.querySelector("#wind");
+  let humid = response.data.main.humidity;
+  let windSpeed = response.data.wind.speed;
+  condition.innerHTML = response.data.weather.main;
+  humidity.innerHTML = `${humid}%`;
+  wind.innerHTML = `${windSpeed}km/h`;
   temp.innerHTML = `${temperature}`;
   cityText.innerHTML = response.data.name;
 }
