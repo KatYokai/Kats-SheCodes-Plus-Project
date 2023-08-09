@@ -1,13 +1,17 @@
 body {
-  background: #c8e6f1;
+  background: #ffffff;
   font-family: "Lucida Console", monospace;
 }
 .container {
   border-radius: 10px;
   padding: 10px 30px 30px;
-  background: rgba(255, 255, 255, 0.2);
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/710/original/blue_clay_background_Medium.png?1691597297");
+  background-size: cover;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
+  margin: 50px auto 0;
+}
+.text-center {
+  background: rgba(255, 255, 255, 0.5);
 }
 ul {
   list-style: none;
@@ -24,6 +28,7 @@ h2 {
 p {
   text-align: center;
   font-weight: normal;
+  font-weight: bold;
 }
 footer {
   font-size: 12px;
@@ -70,4 +75,10 @@ a {
 }
 .mainImg {
   width: 250px;
+}
+.miniImg {
+  width: 60px;
+}
+.low {
+  color: rgba(0, 0, 0, 0.6);
 }
