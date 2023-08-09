@@ -1,6 +1,13 @@
-//Date
+//Date Today
 let now = new Date();
 let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
   "Sunday",
   "Monday",
   "Tuesday",
@@ -15,6 +22,31 @@ let hours = now.getHours();
 let minutes = now.getMinutes();
 let date = document.querySelector("#date");
 date.innerHTML = `${day} ${hours}:${minutes}`;
+
+//Date Rest of Week
+let tomorrow = document.querySelector("#day1");
+let day1 = days[now.getDay() + 1];
+tomorrow.innerHTML = `${day1}`;
+
+let dayAfter = document.querySelector("#day2");
+let day2 = days[now.getDay() + 2];
+dayAfter.innerHTML = `${day2}`;
+
+let dayafterThat = document.querySelector("#day3");
+let day3 = days[now.getDay() + 3];
+dayafterThat.innerHTML = `${day3}`;
+
+let dayafterThat1 = document.querySelector("#day4");
+let day4 = days[now.getDay() + 4];
+dayafterThat1.innerHTML = `${day4}`;
+
+let dayafterThat2 = document.querySelector("#day5");
+let day5 = days[now.getDay() + 5];
+dayafterThat2.innerHTML = `${day5}`;
+
+let dayafterThat3 = document.querySelector("#day6");
+let day6 = days[now.getDay() + 6];
+dayafterThat3.innerHTML = `${day6}`;
 //City and Temp
 function location(event) {
   event.preventDefault();
