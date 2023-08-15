@@ -85,7 +85,9 @@ function showTemp(response) {
   cityText.innerHTML = response.data.name;
 
   weatherIcon(response);
+  getForecast(response.data.coord);
 }
+
 function weatherIcon(response) {
   let mainImg = document.querySelector("#mainImg");
   if (response.data.weather[0].main === "Clear") {
@@ -125,9 +127,55 @@ function weatherIcon(response) {
     );
   }
 }
+
 navigator.geolocation.getCurrentPosition(locationTemp);
 
 let cityText = document.querySelector("#city-text");
 let locationInput = document.querySelector("#location-input");
 locationInput.addEventListener("submit", location);
 let apiKey = "fda3688b1db05987dd5d07c237aecfba";
+
+//Temp for Other Days
+function getForecast(coordinates) {
+  let apiKey = "fda3688b1db05987dd5d07c237aecfba";
+  let lat = coordinates.lat;
+  let lon = coordinates.lon;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  let day1high = document.querySelector("#day1high");
+  let day1low = document.querySelector("#day1low");
+  day1high.innerHTML = `${Math.round(response.data.daily[1].temp.max)}°`;
+  day1low.innerHTML = `${Math.round(response.data.daily[1].temp.min)}°`;
+
+  let day2high = document.querySelector("#day2high");
+  let day2low = document.querySelector("#day2low");
+  day2high.innerHTML = `${Math.round(response.data.daily[2].temp.max)}°`;
+  day2low.innerHTML = `${Math.round(response.data.daily[2].temp.min)}°`;
+
+  let day3high = document.querySelector("#day3high");
+  let day3low = document.querySelector("#day3low");
+  day3high.innerHTML = `${Math.round(response.data.daily[3].temp.max)}°`;
+  day3low.innerHTML = `${Math.round(response.data.daily[3].temp.min)}°`;
+
+  let day4high = document.querySelector("#day4high");
+  let day4low = document.querySelector("#day4low");
+  day4high.innerHTML = `${Math.round(response.data.daily[4].temp.max)}°`;
+  day4low.innerHTML = `${Math.round(response.data.daily[4].temp.min)}°`;
+
+  let day5high = document.querySelector("#day5high");
+  let day5low = document.querySelector("#day5low");
+  day5high.innerHTML = `${Math.round(response.data.daily[5].temp.max)}°`;
+  day5low.innerHTML = `${Math.round(response.data.daily[5].temp.min)}°`;
+
+  let day6high = document.querySelector("#day6high");
+  let day6low = document.querySelector("#day6low");
+  day6high.innerHTML = `${Math.round(response.data.daily[6].temp.max)}°`;
+  day6low.innerHTML = `${Math.round(response.data.daily[6].temp.min)}°`;
+
+  forcastIcon(response);
+}
+
+function forcastIcon(response) {}
