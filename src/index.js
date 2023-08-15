@@ -178,4 +178,232 @@ function displayForecast(response) {
   forcastIcon(response);
 }
 
-function forcastIcon(response) {}
+function forcastIcon(response) {
+  let miniImg1 = document.querySelector("#miniImg1");
+  if (response.data.daily[1].weather[0].main === "Clear") {
+    miniImg1.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/531/original/sun_icon.png?1691437170`
+    );
+  } else if (response.data.daily[1].weather[0].main === "Clouds") {
+    miniImg1.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/620/original/cloud_icon_Small.png?1691525951`
+    );
+  } else if (response.data.daily[1].weather[0].main === "Thunderstorm") {
+    miniImg1.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/624/original/rain_icon.png?1691526296`
+    );
+  } else if (response.data.daily[1].weather[0].main === "Drizzle") {
+    miniImg1.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/629/original/drizzle_icon.png?1691526943`
+    );
+  } else if (response.data.daily[1].weather[0].main === "Rain") {
+    miniImg1.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/630/original/rain_icon_Small.png?1691527033`
+    );
+  } else if (response.data.daily[1].weather[0].main === "Snow") {
+    miniImg1.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/631/original/snow_icon.png?1691527300`
+    );
+  } else {
+    miniImg1.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/634/original/mist_icon_Small.png?1691527443`
+    );
+  }
+
+  let miniImg2 = document.querySelector("#miniImg2");
+  if (response.data.daily[2].weather[0].main === "Clear") {
+    miniImg2.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/531/original/sun_icon.png?1691437170`
+    );
+  } else if (response.data.daily[2].weather[0].main === "Clouds") {
+    miniImg2.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/620/original/cloud_icon_Small.png?1691525951`
+    );
+  } else if (response.data.daily[2].weather[0].main === "Thunderstorm") {
+    miniImg2.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/624/original/rain_icon.png?1691526296`
+    );
+  } else if (response.data.daily[2].weather[0].main === "Drizzle") {
+    miniImg2.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/629/original/drizzle_icon.png?1691526943`
+    );
+  } else if (response.data.daily[2].weather[0].main === "Rain") {
+    miniImg2.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/630/original/rain_icon_Small.png?1691527033`
+    );
+  } else if (response.data.daily[2].weather[0].main === "Snow") {
+    miniImg2.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/631/original/snow_icon.png?1691527300`
+    );
+  } else {
+    miniImg2.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/634/original/mist_icon_Small.png?1691527443`
+    );
+  }
+
+  let miniImg3 = document.querySelector("#miniImg3");
+  if (response.data.daily[3].weather[0].main === "Clear") {
+    miniImg3.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/531/original/sun_icon.png?1691437170`
+    );
+  } else if (response.data.daily[3].weather[0].main === "Clouds") {
+    miniImg3.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/620/original/cloud_icon_Small.png?1691525951`
+    );
+  } else if (response.data.daily[3].weather[0].main === "Thunderstorm") {
+    miniImg3.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/624/original/rain_icon.png?1691526296`
+    );
+  } else if (response.data.daily[3].weather[0].main === "Drizzle") {
+    miniImg3.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/629/original/drizzle_icon.png?1691526943`
+    );
+  } else if (response.data.daily[3].weather[0].main === "Rain") {
+    miniImg3.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/630/original/rain_icon_Small.png?1691527033`
+    );
+  } else if (response.data.daily[3].weather[0].main === "Snow") {
+    miniImg3.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/631/original/snow_icon.png?1691527300`
+    );
+  } else {
+    miniImg3.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/634/original/mist_icon_Small.png?1691527443`
+    );
+  }
+
+  let miniImg4 = document.querySelector("#miniImg4");
+  if (response.data.daily[4].weather[0].main === "Clear") {
+    miniImg4.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/531/original/sun_icon.png?1691437170`
+    );
+  } else if (response.data.daily[4].weather[0].main === "Clouds") {
+    miniImg4.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/620/original/cloud_icon_Small.png?1691525951`
+    );
+  } else if (response.data.daily[4].weather[0].main === "Thunderstorm") {
+    miniImg4.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/624/original/rain_icon.png?1691526296`
+    );
+  } else if (response.data.daily[4].weather[0].main === "Drizzle") {
+    miniImg4.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/629/original/drizzle_icon.png?1691526943`
+    );
+  } else if (response.data.daily[4].weather[0].main === "Rain") {
+    miniImg4.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/630/original/rain_icon_Small.png?1691527033`
+    );
+  } else if (response.data.daily[4].weather[0].main === "Snow") {
+    miniImg4.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/631/original/snow_icon.png?1691527300`
+    );
+  } else {
+    miniImg4.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/634/original/mist_icon_Small.png?1691527443`
+    );
+  }
+
+  let miniImg5 = document.querySelector("#miniImg5");
+  if (response.data.daily[5].weather[0].main === "Clear") {
+    miniImg5.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/531/original/sun_icon.png?1691437170`
+    );
+  } else if (response.data.daily[5].weather[0].main === "Clouds") {
+    miniImg5.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/620/original/cloud_icon_Small.png?1691525951`
+    );
+  } else if (response.data.daily[5].weather[0].main === "Thunderstorm") {
+    miniImg5.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/624/original/rain_icon.png?1691526296`
+    );
+  } else if (response.data.daily[5].weather[0].main === "Drizzle") {
+    miniImg5.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/629/original/drizzle_icon.png?1691526943`
+    );
+  } else if (response.data.daily[5].weather[0].main === "Rain") {
+    miniImg5.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/630/original/rain_icon_Small.png?1691527033`
+    );
+  } else if (response.data.daily[5].weather[0].main === "Snow") {
+    miniImg5.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/631/original/snow_icon.png?1691527300`
+    );
+  } else {
+    miniImg5.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/634/original/mist_icon_Small.png?1691527443`
+    );
+  }
+
+  let miniImg6 = document.querySelector("#miniImg6");
+  if (response.data.daily[6].weather[0].main === "Clear") {
+    miniImg6.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/531/original/sun_icon.png?1691437170`
+    );
+  } else if (response.data.daily[6].weather[0].main === "Clouds") {
+    miniImg6.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/620/original/cloud_icon_Small.png?1691525951`
+    );
+  } else if (response.data.daily[6].weather[0].main === "Thunderstorm") {
+    miniImg6.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/624/original/rain_icon.png?1691526296`
+    );
+  } else if (response.data.daily[6].weather[0].main === "Drizzle") {
+    miniImg6.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/629/original/drizzle_icon.png?1691526943`
+    );
+  } else if (response.data.daily[6].weather[0].main === "Rain") {
+    miniImg6.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/630/original/rain_icon_Small.png?1691527033`
+    );
+  } else if (response.data.daily[6].weather[0].main === "Snow") {
+    miniImg6.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/631/original/snow_icon.png?1691527300`
+    );
+  } else {
+    miniImg6.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/092/634/original/mist_icon_Small.png?1691527443`
+    );
+  }
+}
