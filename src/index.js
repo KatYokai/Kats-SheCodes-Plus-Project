@@ -1,3 +1,4 @@
+navigator.geolocation.getCurrentPosition(currentlocationTemp);
 //Date Today
 let now = new Date();
 let days = [
@@ -125,7 +126,6 @@ function weatherIcon(response) {
   }
 }
 navigator.geolocation.getCurrentPosition(locationTemp);
-navigator.geolocation.getCurrentPosition(currentlocationTemp);
 
 let cityText = document.querySelector("#city-text");
 let locationInput = document.querySelector("#location-input");
