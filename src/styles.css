@@ -74,7 +74,8 @@ a {
   font-weight: bold;
 }
 .mainImg {
-  width: 250px;
+  width: 130px auto;
+  height: 350px;
 }
 .miniImg {
   width: 60px;
