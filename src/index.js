@@ -51,8 +51,14 @@ dayafterThat3.innerHTML = `${day6}`;
 
 //City and Temp
 function currentlocationTemp(position) {
+  let apiKey = "fda3688b1db05987dd5d07c237aecfba";
   let currentapiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(currentapiUrl).then(showTemp);
+}
+
+function currentLocationbutton(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(currentlocationTemp);
 }
 
 function location(event) {
@@ -134,7 +140,8 @@ let cityText = document.querySelector("#city-text");
 let locationInput = document.querySelector("#location-input");
 locationInput.addEventListener("submit", location);
 let apiKey = "fda3688b1db05987dd5d07c237aecfba";
-
+let currentLocation = document.querySelector("#current-button");
+currentLocation.addEventListener("click", currentLocationbutton);
 //Temp for Other Days
 function getForecast(coordinates) {
   let apiKey = "fda3688b1db05987dd5d07c237aecfba";
